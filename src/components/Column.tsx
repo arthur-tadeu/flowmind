@@ -40,7 +40,7 @@ export const Column: React.FC<ColumnProps> = ({ id, title, tasks }) => {
         
         {tasks.length === 0 && (
           <div className="flex-1 flex flex-col items-center justify-center border-2 border-dashed border-apple-border/30 rounded-apple-lg p-8 text-center">
-            <p className="text-sm text-apple-gray">Nenhuma tarefa aqui</p>
+            <p className="text-xs font-bold text-apple-gray uppercase tracking-widest">Nenhuma tarefa aqui</p>
           </div>
         )}
       </div>

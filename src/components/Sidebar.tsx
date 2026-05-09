@@ -26,7 +26,7 @@ export const Sidebar: React.FC = () => {
     )}>
       <div className="p-6 flex items-center gap-3">
         <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain flex-shrink-0" />
-        {!isCollapsed && <span className="font-bold text-lg tracking-tight dark:text-white">FlowMind</span>}
+        {!isCollapsed && <span className="font-bold text-lg tracking-tighter dark:text-white uppercase">FlowMind</span>}
       </div>
 
       <nav className="flex-1 px-3 space-y-1 mt-4">
@@ -41,8 +41,8 @@ export const Sidebar: React.FC = () => {
                 : "text-apple-gray hover:bg-apple-light-gray dark:hover:bg-white/5 hover:text-apple-text dark:hover:text-white"
             )}
             style={{ 
-              backgroundColor: activeTab === item.id ? `${themeColor}15` : undefined,
-              color: activeTab === item.id ? themeColor : undefined 
+              backgroundColor: activeTab === item.id ? themeColor : undefined,
+              color: activeTab === item.id ? '#FFFFFF' : undefined 
             }}
           >
             <item.icon size={20} className={cn(
