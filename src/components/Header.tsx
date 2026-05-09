@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ onNewTask }) => {
     <header className="sticky top-0 z-10 flex items-center justify-between px-8 py-4 bg-white/80 dark:bg-[#1C1C1E]/80 backdrop-blur-md border-b border-apple-border/50 dark:border-white/10 transition-colors">
       <div className="flex items-center gap-3 w-1/4">
         <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-        <h1 className="text-xl font-semibold tracking-tight text-apple-text dark:text-white">FlowMind</h1>
+        <h1 className="text-xl font-bold tracking-tighter text-apple-text dark:text-white uppercase">FlowMind</h1>
       </div>
 
       <div className="flex-1 max-w-md px-4">
@@ -35,8 +35,8 @@ export const Header: React.FC<HeaderProps> = ({ onNewTask }) => {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Pesquisar tarefas..."
-            className="w-full pl-10 pr-4 py-2 bg-apple-light-gray dark:bg-white/5 border border-apple-border/50 dark:border-white/10 rounded-apple-lg focus:outline-none focus:ring-4 focus:ring-apple-blue/5 transition-all dark:text-white"
+            placeholder="PESQUISAR TAREFAS..."
+            className="w-full pl-10 pr-4 py-2 bg-apple-light-gray dark:bg-white/5 border border-apple-border/50 dark:border-white/10 rounded-apple-lg focus:outline-none focus:ring-4 focus:ring-apple-blue/5 transition-all dark:text-white uppercase text-xs font-semibold"
             style={{ borderColor: isDarkMode ? undefined : `${themeColor}20` }}
           />
         </div>
@@ -81,12 +81,11 @@ export const Header: React.FC<HeaderProps> = ({ onNewTask }) => {
         </button>
         
         <div className="w-10 h-10 rounded-full border-2 border-apple-border/50 p-0.5 cursor-pointer hover:border-apple-blue transition-colors">
-          <div className="w-full h-full bg-apple-light-gray rounded-full overflow-hidden flex items-center justify-center">
-            <img 
-              src="https://ui-avatars.com/api/?name=Arthur+Tadeu&background=007AFF&color=fff" 
-              alt="Avatar"
-              className="w-full h-full object-cover"
-            />
+          <div 
+            className="w-full h-full rounded-full flex items-center justify-center text-white font-bold text-sm"
+            style={{ backgroundColor: themeColor }}
+          >
+            AT
           </div>
         </div>
       </div>
