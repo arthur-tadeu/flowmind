@@ -6,8 +6,8 @@ import { Login } from './components/Login';
 import { Sidebar } from './components/Sidebar';
 import { useKanbanStore } from './store/useKanbanStore';
 import { auth, db } from './lib/firebase';
-import { onAuthStateChanged, User } from 'firebase/auth';
-import { collection, query, where, onSnapshot, addDoc, serverTimestamp } from 'firebase/firestore';
+import { onAuthStateChanged, type User } from 'firebase/auth';
+import { collection, query, where, onSnapshot, addDoc } from 'firebase/firestore';
 import { Dashboard } from './components/Dashboard';
 
 const App: React.FC = () => {

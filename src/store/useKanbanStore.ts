@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Task, Status, Priority } from '../types';
 import { db } from '../lib/firebase';
-import { doc, updateDoc, deleteDoc, increment } from 'firebase/firestore';
+import { doc, updateDoc, deleteDoc } from 'firebase/firestore';
 
 interface KanbanState {
   tasks: Task[];
@@ -42,7 +42,7 @@ export const useKanbanStore = create<KanbanState>()(
       setSearchQuery: (searchQuery) => set({ searchQuery }),
       setTasks: (tasks) => set({ tasks }),
       
-      addTask: (title, description, priority, labels) => {
+      addTask: (_title, _description, _priority, _labels) => {
         // Handled in App.tsx handleAddTask for Firestore context
       },
 
